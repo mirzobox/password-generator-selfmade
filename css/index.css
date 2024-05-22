@@ -20,12 +20,12 @@
   height: 100%;
   position: fixed;
   inset: 0;
-  background-color: var(--dark-slate-gray);
+  background-color: var(--charcoal-gray);
   transition: opacity 0.4s ease;
 }
 
 .loader--manager {
-  opacity: 0;
+  opacity: 0;, 
   pointer-events: none;
 }
 
@@ -34,7 +34,7 @@
   height: 54px;
   position: relative;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: var(--dark-slate-gray);
   background-image: radial-gradient(
       circle 5px,
       var(--goldenrod) 100%,
@@ -195,9 +195,34 @@ body {
   opacity: 0.8;
 }
 
-/* ? ============================================================================================  */
-/* KEYFRAMES  */
-/* ? ============================================================================================  */
+/* RESPONSIVE */
+@media only screen and (max-width: 400px) {
+  .section-password-generator__container {
+    max-width: 100%;
+  }
+
+  .section-password-generator__heading {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .password-zone__box {
+    padding: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .password-zone__text {
+    font-size: 2.4rem;
+  }
+
+  .password-zone__copied {
+    margin-right: 0.8rem;
+    font-size: 1.4rem;
+  }
+}
+/* ? ============================================================================================ */
+/* KEYFRAMES */
+/* ? ============================================================================================ */
 @keyframes rotate {
   0%,
   20% {

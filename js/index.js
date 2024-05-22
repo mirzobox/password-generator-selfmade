@@ -11,7 +11,7 @@ window.onload = () => {
 
 // COPY-GENRATED-PASSWORD
 elCopyButton.onclick = () => {
-  elPassword.dataset.readyToCopy === "true"
+  elPassword.dataset.readyToCopy === "false"
     ? navigator.clipboard
         .writeText(elPassword.innerText)
         .then(() => {
