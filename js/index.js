@@ -1,6 +1,7 @@
 import loader from "./loader.js";
 import cssClassModifiers from "./css-class-modifiers.js";
 import { elCopied, elCopyButton, elPassword } from "./html-elements.js";
+import passwordGenerator from "./password-generator.js";
 
 window.onload = () => {
   const { timeout } = cssClassModifiers;
@@ -9,8 +10,17 @@ window.onload = () => {
   }, timeout);
 };
 
-// COPY-GENRATED-PASSWORD
+// COPY-GENERATED-PASSWORD
 elCopyButton.onclick = ({ target }) => {
+  console.log(
+    passwordGenerator(8, {
+      uppercases: true,
+      lowercases: true,
+      numbers: true,
+      symbols: true,
+    })
+  );
+
   elPassword.dataset.readyToCopy === "false"
     ? navigator.clipboard
         .writeText(elPassword.innerText)
