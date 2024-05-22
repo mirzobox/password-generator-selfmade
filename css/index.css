@@ -186,6 +186,10 @@ body {
   transition: color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
 }
 
+.password-zone__copy-button--mint-green {
+  color: var(--mint-green);
+}
+
 .password-zone__copy-button:hover {
   color: var(--mint-green);
 }

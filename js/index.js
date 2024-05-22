@@ -10,15 +10,21 @@ window.onload = () => {
 };
 
 // COPY-GENRATED-PASSWORD
-elCopyButton.onclick = () => {
+elCopyButton.onclick = ({ target }) => {
   elPassword.dataset.readyToCopy === "false"
     ? navigator.clipboard
         .writeText(elPassword.innerText)
         .then(() => {
-          const { classPasswordZoneCopiedShow, timeout } = cssClassModifiers;
+          const {
+            classPasswordZoneCopiedShow,
+            classPasswordZoneCopyButtonMintGreen,
+            timeout,
+          } = cssClassModifiers;
           elCopied.classList.add(classPasswordZoneCopiedShow);
+          target.classList.add(classPasswordZoneCopyButtonMintGreen);
           setTimeout(() => {
             elCopied.classList.remove(classPasswordZoneCopiedShow);
+            target.classList.remove(classPasswordZoneCopyButtonMintGreen);
           }, timeout);
         })
         .catch(({ message }) => alert(message))
