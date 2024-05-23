@@ -148,10 +148,12 @@ body {
   opacity: 0.25;
   pointer-events: none;
   user-select: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .password-zone__text--ready {
   color: var(--white);
+  opacity: 1;
 }
 
 .password-zone__copy {
@@ -197,6 +199,113 @@ body {
 .password-zone__copy-button:active {
   transform: scale(0.9);
   opacity: 0.8;
+}
+
+/* PASSWORD-SETTINGS */
+.section-password-settings__inner {
+  padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  background-color: var(--dark-slate-gray);
+}
+
+.section-password-settings__length {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.section-password-settings__length-label {
+  text-transform: capitalize;
+}
+
+.section-password-settings__length-text {
+  color: var(--mint-green);
+}
+
+.section-password-settings__range {
+  width: 100%;
+  margin-bottom: 3.2rem;
+}
+
+/* EXTRA-SETTINGS */
+.extra-settings__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 3.2rem 0;
+  padding: 0;
+  list-style: none;
+  gap: 2rem;
+}
+
+.extra-settings__item {
+  display: flex;
+  align-items: center;
+}
+
+.item__state {
+  margin-right: 2.4rem;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../img/unchecked.svg");
+}
+
+.item__checkbox:checked ~ .item__state {
+  background-image: url("../img/checked.svg");
+}
+
+.item__label {
+  text-transform: capitalize;
+}
+
+/* STRENGTH */
+.strength {
+  background-color: var(--charcoal-gray);
+}
+
+.strength__state {
+  display: flex;
+  align-items: center;
+}
+
+.strength__state-text {
+  text-transform: uppercase;
+  margin-right: 1.5rem;
+}
+
+.strength__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.2rem 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.strength__title {
+  color: var(--taupe);
+  text-transform: uppercase;
+}
+
+/* GENERATE */
+.generate-button {
+  padding: 0;
+  border: 2px solid var(--mint-green);
+  background-color: var(--mint-green);
+  color: var(--dark-slate-gray);
+  text-transform: uppercase;
+  padding: 2rem;
+  width: 100%;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+}
+
+.generate-button:hover {
+  background-color: transparent;
+  color: var(--mint-green);
+}
+
+.generate-button:active {
+  transform: scale(0.9);
 }
 
 /* RESPONSIVE */

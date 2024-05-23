@@ -27,6 +27,7 @@
           Password generator
         </h1>
 
+        <!-- PASSSWORD-ZONE  -->
         <section class="password-zone">
           <h2 class="visually-hidden">Copy your awesome password</h2>
           <div class="password-zone__box">
@@ -58,6 +59,129 @@
           </div>
         </section>
       </div>
+    </section>
+
+    <!-- PASSWORD-SETTINGS -->
+    <section class="section-password-settings">
+      <form id="settingsForm">
+        <div class="section-password-settings__container container">
+          <div class="section-password-settings__inner">
+            <div class="section-password-settings__length">
+              <h3 class="section-password-settings__length-label heading">
+                Character length
+              </h3>
+              <span
+                class="section-password-settings__length-text heading-l"
+                id="passwordLength"
+                >0</span
+              >
+            </div>
+            <input
+              id="passwordLengthRange"
+              type="range"
+              max="20"
+              min="0"
+              value="0"
+              name="length"
+              class="section-password-settings__range"
+            />
+
+            <!-- EXTRA-LETTERS-SETTINGS -->
+            <div class="extra-settings">
+              <ul class="extra-settings__list">
+                <li class="extra-settings__item item">
+                  <input
+                    class="item__checkbox visually-hidden"
+                    type="checkbox"
+                    id="uppercase"
+                    name="uppercases"
+                  />
+                  <span class="item__state"></span>
+                  <label class="item__label" for="uppercase"
+                    >Include Uppercase Letters</label
+                  >
+                </li>
+                <li class="extra-settings__item item">
+                  <input
+                    class="item__checkbox visually-hidden"
+                    type="checkbox"
+                    id="lowercase"
+                    name="lowercases"
+                  />
+                  <span class="item__state"></span>
+                  <label class="item__label" for="lowercase"
+                    >Include Lowercase Letters</label
+                  >
+                </li>
+                <li class="extra-settings__item item">
+                  <input
+                    class="item__checkbox visually-hidden"
+                    type="checkbox"
+                    id="numbers"
+                    name="numbers"
+                    defaultValue="false"
+                  />
+                  <span class="item__state"></span>
+                  <label class="item__label" for="numbers"
+                    >Include Numbers</label
+                  >
+                </li>
+                <li class="extra-settings__item item">
+                  <input
+                    class="item__checkbox visually-hidden"
+                    type="checkbox"
+                    id="symbols"
+                    name="symbols"
+                    defaultValue="false"
+                  />
+                  <span class="item__state"></span>
+                  <label class="item__label" for="symbols"
+                    >Include Symbols</label
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- STRENGTH -->
+            <div class="strength">
+              <div class="strength__inner">
+                <h3 class="strength__title heading">Strength</h3>
+                <div class="strength__state">
+                  <span
+                    class="strength__state-text heading-m"
+                    id="strengthText"
+                  ></span>
+                  <img
+                    class="strength__state-img"
+                    src="img/empty.svg"
+                    alt="Strength state"
+                    id="strengthImg"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- GENERATE-BUTTON -->
+            <button class="generate-button" type="submit">
+              <span class="generate-button__inner">
+                <span class="generate-button__text">Generate</span>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.10553 12L11.1055 6.00002L5.10553 0L3.84051 1.26501L7.681 5.10547L6.10352e-05 5.10547V6.8946L7.681 6.8946L3.84051 10.735L5.10553 12Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
     </section>
     <!-- Loader  -->
     <div class="loader" id="loader">
