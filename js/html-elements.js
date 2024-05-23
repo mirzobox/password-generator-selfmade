@@ -6,7 +6,9 @@ const elLoader = document.getElementById("loader"),
   elSettingsForm = document.getElementById("settingsForm"),
   elStrengthImg = document.getElementById("strengthImg"),
   elStrengthText = document.getElementById("strengthText"),
-  elCopyButton = document.getElementById("copyButton");
+  elCopyButton = document.getElementById("copyButton"),
+  // Query selector
+  elOptions = document.querySelectorAll(".js-option");
 
 export {
   elLoader,
@@ -17,5 +19,6 @@ export {
   elStrengthText,
   elSettingsForm,
   elPasswordLength,
+  elOptions,
   elPasswordLengthRange,
 };

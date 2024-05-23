@@ -243,11 +243,14 @@ body {
 }
 
 .item__state {
+  display: flex;
+  flex-shrink: 0;
   margin-right: 2.4rem;
-  display: block;
   width: 2rem;
   height: 2rem;
   background-image: url("../img/unchecked.svg");
+  cursor: pointer;
+  transition: background-image 0.2s ease;
 }
 
 .item__checkbox:checked ~ .item__state {
@@ -256,21 +259,13 @@ body {
 
 .item__label {
   text-transform: capitalize;
+  cursor: pointer;
+  user-select: none;
 }
 
 /* STRENGTH */
 .strength {
   background-color: var(--charcoal-gray);
-}
-
-.strength__state {
-  display: flex;
-  align-items: center;
-}
-
-.strength__state-text {
-  text-transform: uppercase;
-  margin-right: 1.5rem;
 }
 
 .strength__inner {
@@ -284,6 +279,23 @@ body {
 .strength__title {
   color: var(--taupe);
   text-transform: uppercase;
+}
+
+.strength__state {
+  display: flex;
+  align-items: center;
+}
+
+.strength__state-text {
+  text-transform: uppercase;
+  margin-right: 1.5rem;
+}
+
+.strength__state-img {
+  object-fit: contain;
+  display: block;
+  width: 6.4rem;
+  height: 2.8rem;
 }
 
 /* GENERATE */
@@ -307,9 +319,12 @@ body {
 .generate-button:active {
   transform: scale(0.9);
 }
-
 /* RESPONSIVE */
 @media only screen and (max-width: 400px) {
+  body {
+    font-size: 1.6rem;
+  }
+
   .section-password-generator__container {
     max-width: 100%;
   }
@@ -331,6 +346,52 @@ body {
   .password-zone__copied {
     margin-right: 0.8rem;
     font-size: 1.4rem;
+  }
+
+  .section-password-settings__inner {
+    padding: 1.6rem;
+  }
+
+  .section-password-settings__length {
+    margin-bottom: 1.3rem;
+  }
+
+  .section-password-settings__length-label {
+    font-size: 1.6rem;
+  }
+
+  .section-password-settings__length-text {
+    font-size: 2.4rem;
+  }
+
+  .extra-settings__list {
+    gap: 1.6rem;
+  }
+
+  .item__state {
+    margin-right: 2rem;
+  }
+
+  .item__label > b {
+    display: none;
+  }
+
+  .strength__inner {
+    padding: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .strength__title {
+    font-size: 1.6rem;
+  }
+
+  .strength__state-text {
+    display: none;
+  }
+
+  .generate-button {
+    font-size: 1.6rem;
+    padding: 1.8rem;
   }
 }
 /* ? ============================================================================================ */
