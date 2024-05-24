@@ -113,7 +113,7 @@ body {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 58rem;
+  max-width: 62rem;
   padding-left: 2rem;
   padding-right: 2rem;
   margin-left: auto;
@@ -166,7 +166,7 @@ body {
   color: var(--mint-green);
   text-transform: uppercase;
   opacity: 0;
-  visually: hidden;
+  visibility: hidden;
   user-select: none;
   transform: scale(0.9);
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -174,7 +174,7 @@ body {
 
 .password-zone__copied--show {
   opacity: 1;
-  visually: visible;
+  visibility: visible;
   transform: scale(1);
 }
 
@@ -320,7 +320,7 @@ body {
   transform: scale(0.9);
 }
 /* RESPONSIVE */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   body {
     font-size: 1.6rem;
   }

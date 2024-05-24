@@ -46,6 +46,7 @@ elCopyButton.onclick = ({ target }) => {
   } else return false;
 };
 
+// RANGE
 elPasswordLengthRange.oninput = (e) => {
   elPasswordLength.innerText = e.target.value;
 };
@@ -59,8 +60,8 @@ elSettingsForm.onsubmit = (e) => {
   }
   readySettings.length = Number(readySettings.length);
   for (const [key] of Object.entries(readySettings)) {
-    if (typeof readySettings[key] !== "number") {
-      readySettings[key] = readySettings[key] === "on" ? true : false;
+    if (typeof readySettings[key] !== "number" && readySettings[key] === "on") {
+      readySettings[key] = true;
     }
   }
   readySettings = { ...defaultSettings, ...readySettings };
